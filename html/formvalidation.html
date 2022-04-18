@@ -1,0 +1,73 @@
+<!-- Validação necessária
+Muitas vezes, queremos garantir que campos específicos tenham sido preenchidos antes de enviar o formulário, por exemplo, o e-mail e a senha em um formulário de login.
+
+Para tornar um campo obrigatório, simplesmente adicionamos o requiredatributo a ele:
+
+
+Para garantir uma boa experiência do usuário e atender às diretrizes de acessibilidade, devemos sempre indicar quais campos são obrigatórios. Isso geralmente será feito adicionando um asterisco (*) ao rótulo do campo obrigatório, como fizemos no exemplo. -->
+
+---------------------------------------------------------------------------
+
+<!-- Validação de comprimento mínimo
+Para adicionar a validação de comprimento mínimo, damos ao controle de formulário um minlengthatributo com um valor inteiro que representa a quantidade mínima de caracteres que queremos permitir no controle de formulário: -->
+
+<!-- Validação de comprimento máximo
+Para adicionar uma validação de comprimento máximo, damos ao controle de formulário um maxlengthatributo com um valor inteiro que representa a quantidade máxima de caracteres que queremos permitir no controle de formulário: -->
+
+----------------------------------------------------------------------------
+
+<!-- Validação mínima
+Para adicionar uma validação de valor mínimo, damos ao controle de formulário um minatributo com um valor inteiro que representa o número mínimo que queremos que o controle de formulário aceite:
+
+
+Tente enviar o formulário com uma quantidade de 0 para ver a validação em ação. -->
+
+<!-- Validação máxima
+Para adicionar uma validação de valor máximo, damos ao controle de formulário um maxatributo com um valor inteiro que representa o número máximo que queremos que o controle de formulário aceite:
+
+
+Tente enviar o formulário com sete passageiros para ver a validação em ação. -->
+
+---------------------------------------------------------------------------
+
+<!-- Validações de padrões
+Para garantir que obtenhamos as informações corretas dos usuários, muitas vezes queremos garantir que os dados correspondam a um padrão específico. Os aplicativos do mundo real verificariam se um número de cartão de crédito ou um CEP está no formato correto.
+
+Para adicionar uma validação de padrão, damos ao controle de formulário um patternatributo com uma expressão regular como valor. Em nosso exemplo, estamos usando a validação de padrão para garantir que um CEP dos EUA esteja no formato correto. 5 números seguidos por um traço opcional e mais 4 números:
+
+
+A inserção de um CEP incorreto e o envio do formulário exibirá o seguinte erro de validação no navegador “Por favor, corresponda ao formato solicitado”. Isso não é muito útil, pois não informa como corrigir o problema. -->
+
+---------------------------------------------------------------------------
+
+
+<!-- Validações de estilo
+
+Podemos direcionar controles de formulário que passaram ou falharam em validações usando as :valide :invalidpseudo-classes.
+
+Para ver isso em ação, usaremos nosso exemplo de e-mail e site que analisamos anteriormente:
+
+
+Em primeiro lugar, direcionamos todas as entradas válidas e damos a elas uma borda verde. Nossas entradas de email e URL inicialmente têm uma borda verde, pois não são campos obrigatórios e são válidos.
+
+Quando um campo é inválido, damos a ele uma borda vermelha. Tente inserir um endereço de e-mail e URL inválidos para ver como fica. -->
+
+---------------------------------------------------------------------------
+
+links e DOCUMENTAÇÕES do material
+
+Leia e acompanhe https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation
+
+Acesse o Guia Completo do SitePoint https://www.sitepoint.com/html-forms-constraint-validation-complete-guide/
+
+MATERIAL COMPLEMENTARES
+
+Confira  html5pattern  para obter uma lista de expressões regulares de padrão comumente usadas que podem ser úteis.
+
+Veja  este tópico do Twitter https://twitter.com/vponamariov/status/1400388896136040454  sobre o que fazer e o que não fazer para UX de validação de formulário.
+
+10 Diretrizes https://www.nngroup.com/articles/errors-forms-design-guidelines/ para design de validação de formulário
+
+Expressões regulares explicadas claramente https://towardsdatascience.com/regular-expressions-clearly-explained-with-examples-822d76b037b4 passam por vários exemplos do mundo real de padrões de expressão regular e percorrem o que eles estão fazendo passo a passo. Este recurso pode ser útil se você não quiser apenas copiar + colar padrões populares e, em vez disso, quiser saber o que um padrão está realmente fazendo.
+
+Um último recurso https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet sobre expressões regulares que pode ser útil é a folha de dicas de sintaxe de expressão regular do MDN . Esta folha de dicas faz um ótimo trabalho explicando a sintaxe das expressões regulares com mais detalhes.
