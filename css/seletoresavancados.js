@@ -84,3 +84,26 @@
 // ::first-lettere ::first-linepermitem que você (você adivinhou!) dê um estilo especial à primeira letra ou linha de algum texto.
 
 // ::beforee::after nos permite adicionar elementos extras na página com CSS, em vez de HTML. Usá-lo para decorar texto de várias maneiras é um caso de uso comum.
+
+//---------------------------------------------------------------------------------------------
+
+// Seletores de atributos
+
+// A última ferramenta que vamos adicionar à caixa são os seletores de atributos. Lembre-se de que um atributo é simplesmente qualquer coisa na tag de abertura de um elemento HTML - como src='picture.jpg'ou href="www.theodinproject.com".
+
+// Como escrevemos nossos próprios valores para atributos, precisamos de um sistema um pouco mais flexível para poder direcionar valores específicos.
+
+// Seletores de atributos têm a mesma especificidade que classes e pseudo-classes (0, 0, 1, 0).
+
+// Vejamos alguns exemplos para uso básico.
+
+// [attribute]- Este seletor geral selecionará qualquer coisa onde exista o atributo fornecido. Seu valor não importa.
+// selector[attribute]- Opcionalmente podemos combinar nossos seletores de atributos com outros tipos de seletores, como seletores de classe ou elemento.
+// [attribute="value"]- Para ser realmente específico, podemos usar =para combinar um atributo específico com um valor específico.
+
+
+// Às vezes, precisamos ser mais gerais em como acessamos esses atributos. Por exemplo, talvez estejamos interessados ​​apenas em imgelementos onde o srcvalor do atributo termina em .jpg. Para casos como este, temos alguns seletores de atributos que nos permitem corresponder uma parte do valor do atributo. Se você já se deparou com expressões regulares antes, esses atributos usam uma sintaxe semelhante.
+
+// [attribute^="value"]- ^= Combinará strings desde o início.
+// [attribute$="value"]- $=Irá combinar as strings a partir do final.
+// [attribute*="value"]- *=O seletor curinga corresponderá a qualquer lugar dentro da string.
