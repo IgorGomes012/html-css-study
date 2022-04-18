@@ -1,0 +1,145 @@
+
+<!-- Introdução
+Os formulários são uma das partes mais importantes do seu site. Eles são a porta de entrada do seu usuário para o seu back-end – o usuário fornece dados em um formulário e você faz coisas com eles.
+
+Você precisa especificar os tipos adequados de entradas para cada item de dados possível, pois geralmente há várias maneiras de coletar um dado, mas apenas uma maneira é mais fácil para o usuário.
+
+Nesta lição, exploraremos os fundamentos dos formulários HTML e alguns dos diferentes tipos de entradas disponíveis para você.
+
+Resultados de Aprendizagem
+Ao final desta lição, você deverá ser capaz de:
+
+Criar formulários com HTML
+Tenha uma ideia básica de como estilizar formulários
+O elemento do formulário
+O elemento de formulário é um elemento de contêiner como o elemento div que aprendemos anteriormente no currículo. O elemento de formulário envolve todas as entradas com as quais um usuário irá interagir em um formulário.
+
+O elemento form aceita dois atributos essenciais; o primeiro é o actionatributo que recebe um valor de URL que informa ao formulário para onde deve enviar seus dados para serem processados. Mais adiante no currículo, aprenderemos a conectar sistemas de back-end a formulários de front-end usando esse atributo. Por enquanto, é apenas essencial saber para que o actionatributo é usado.
+
+O segundo é o methodatributo que informa ao navegador qual método de solicitação HTTP ele deve usar para enviar o formulário. Os métodos de solicitação GET e POST são os dois que você mais usará. -->
+
+<form action="example.com/path" method="post">
+
+</form>
+---------------------------------------------------------------------------
+
+
+
+<!-- elemento input é o mais versátil de todos os elementos de controle de formulário. Ele aceita um typeatributo que informa ao navegador que tipo de dados ele deve esperar e como ele deve renderizar o elemento de entrada.
+
+Uma entrada de texto se parece com isso: -->
+
+<form action="example.com/path" method="post">
+  <input type="text">
+</form>
+
+---------------------------------------------------------------------------------
+
+
+
+<!-- Para criar um rótulo, usamos o <label>elemento. O texto que queremos exibir no rótulo ficará entre suas tags de abertura e fechamento: -->
+
+  <form action="example.com/path" method="post">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName">
+  </form>
+
+  <!-- Os rótulos aceitam um foratributo, que o associa a uma entrada específica. A entrada que queremos associar a um rótulo precisa de um idatributo com o mesmo valor do atributo do rótulo for. -->
+
+
+-------------------------------------------------------------------------------------
+
+
+  <!-- Fazemos isso adicionando um nameatributo às nossas entradas: -->
+
+<label for="first_name">First Name:</label>
+<input type="text" id="first_name" name="first_name">
+
+<!-- O nameatributo serve como referência aos dados inseridos em um controle de formulário após enviá-lo. Você pode pensar nisso como um nome de variável para a entrada. A entrada de formulário deve sempre ter um nameatributo; caso contrário, será ignorado quando o formulário for enviado. -->
+
+--------------------------------------------------------------------------------------
+
+
+<!-- Área de texto
+
+O elemento de área de texto fornece uma caixa de entrada que pode aceitar texto que abrange várias linhas, como comentários e revisões do usuário. Ele também pode ser redimensionado clicando e arrastando o canto inferior direito para torná-lo maior ou menor. -->
+
+<!-- Para criar uma área de texto, usamos o <textarea>elemento: -->
+
+<textarea></textarea>
+Ao contrário dos elementos input, os elementos Textarea possuem uma tag de fechamento. Isso permite que você envolva algum conteúdo inicial que deseja que a área de texto exiba:
+
+<textarea>Some initial content</textarea>
+Os elementos da área de texto aceitam alguns atributos exclusivos que outros controles de formulário não aceitam. Estes são os atributos rowse . colsEles permitem que você controle a altura inicial (linhas) e largura (colunas) da área de texto:
+
+<textarea rows="20" cols="60"></textarea>
+
+----------------------------------------------------------------------------------------
+
+<!-- Selecionar menu suspenso
+
+O elemento select renderiza uma lista suspensa onde os usuários podem selecionar uma opção. Sintaticamente, os elementos select têm marcação semelhante a listas não ordenadas. O elemento select envolve elementos de opção que são as opções que podem ser selecionadas.
+
+Para criar uma lista suspensa de seleção, usamos o <select>elemento. Quaisquer opções que queremos exibir dentro do elemento select são definidas usando <option>elementos: -->
+
+<select name="Car">
+  <option value="mercedes">Mercedes</option>
+  <option value="tesla">Tesla</option>
+  <option value="volvo">Volvo</option>
+  <option value="bmw">BMW</option>
+  <option value="mini">Mini</option>
+  <option value="ford">Ford</option>
+</select>
+
+----------------------------------------------------------------------------------------
+
+<!-- Elemento do conjunto de campos
+
+O elemento fieldset é um elemento container que nos permite agrupar entradas de formulário relacionadas em uma unidade lógica.
+
+Para criar um fieldset, usamos o <fieldset>elemento. Quaisquer entradas de formulário que queremos agrupar vão dentro das tags de fieldset de abertura e fechamento: -->
+
+<fieldset>
+  <label for="first_name">First Name</label>
+  <input type="text" id="first_name" name="first_name">
+
+  <label for="last_name">Last Name</label>
+  <input type="text" id="last_name" name="last_name">
+</fieldset>
+
+----------------------------------------------------------------------------------------
+
+<!-- Lenda
+
+O elemento de legenda é usado para fornecer um cabeçalho ou legenda aos conjuntos de campos para que o usuário possa ver para que serve um agrupamento de entradas.
+
+Para criar uma legenda, usamos o <legend>elemento com o texto que queremos exibir dentro de suas tags de abertura e fechamento. Uma legenda deve sempre vir logo após uma tag de fieldset de abertura: -->
+
+<fieldset>
+  <legend>Contact Details</legend>
+
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name">
+
+  <label for="phone_number">Phone Number:</label>
+  <input type="tel" id="phone_number" name="phone_number">
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email">
+</fieldset>
+
+-------------------------------------------------------------------------------------------
+
+DOCUMENTAÇÕES DO FINAL DE CADA AULA
+
+Noções básicas de formulário
+
+Leia e acompanhe https://developer.mozilla.org/en-US/docs/Learn/Forms#introductory_guides
+
+https://developer.mozilla.org/en-US/docs/Learn/Forms#the_different_form_controls
+
+https://developer.mozilla.org/en-US/docs/Learn/Forms#form_styling_guides
+
+https://web.archive.org/web/20210515225808/https://www.internetingishard.com/html-and-css/forms/
+
+https://web.dev/learn/forms/
