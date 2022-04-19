@@ -1,4 +1,5 @@
 // Estilos padrão
+
 // Quando você fez o primeiro projeto HTML Recipes , você deve ter notado que alguns elementos já possuem um pouco de estilo aplicado a eles. Um h1, por exemplo, é maior e mais ousado que o texto normal. Os links ( a) são azuis e sublinhados. As listas ( ule ol) têm um monte de preenchimento em torno delas. Os navegadores fazem isso inserindo um pouco de CSS em cada página da web. ( Aqui está a folha de estilo HTML padrão do Chrome )
 
 // O problema com isso é que não há garantia de que navegadores diferentes tenham o mesmo estilo. Em geral, as inconsistências serão bem pequenas, mas elas existem. Além disso, em muitos casos, como desenvolvedor, você acabará desfazendo ou refazendo todo esse estilo padrão para tornar seu site exatamente como você o imagina.

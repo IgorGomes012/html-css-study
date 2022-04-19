@@ -1,0 +1,79 @@
+ Eixo principal
+
+Conforme descrito acima, a propriedade flex-direction define a direção do eixo principal e pode tem quatro valores possíveis:
+
+row
+row-reverse
+column
+column-reverse 
+
+Se o valor escolhido for row (linha) ou row-reverse (linha reversa), seu eixo principal se moverá ao longo da linha — na direção inline. 
+
+Se o valor escolhido for column (coluna) ou column-reverse (coluna reversa) e o eixo principal se moverá do topo até o fim da página — na direção block.
+
+
+
+
+
+
+
+Eixo transversal
+
+O eixo transversal é perpendicular ao eixo principal, logo, se a propriedade flex-direction estiver definida nas linhas, como row ou row-reverse, o eixo transversal estará na direção das colunas, como column ou column-reverse. 
+
+
+
+
+
+
+
+
+
+Linhas de Início e Fim
+
+Outra área crítica em termos de compreensão é como o Flexbox não faz nenhuma premissa sobre o modo de escrita do documento. No passado, o CSS utilizava fortemente os modos de escrita horizontal e da esquerda para a direita. Métodos modernos de layout abrangem uma variedade de modos de escrita e, portanto, não assumimos mais que uma linha de texto começará no canto superior esquerdo do documento e sigará para o lado direito, com novas linhas aparecendo uma após a as outra.
+
+Essa discussão sobre a relação entre o flexbox e a especificação do modo de escrita será abordada um artigo posterior, contudo, a descrição a seguir explica brevemente porque não se fala sobre esquerda e direita/ acima e abaixo quando descreve-se a direção para a qual os elementos flex fluem.
+
+Se o valor da propriedade flex-direction for row (linha), considerando o estilo de escrita ocidental, a borda inicial do eixo principal estará localizada à esquerda e a borda final, à direita.
+
+
+
+
+
+Contêiner Flex
+
+A área de um documento que faz uso do flexbox é chamada de contêiner flex. Para criar essa estrutura, define-se o valor da propriedade display do elemento representado pelo contêiner como flex ou inline-flex. Desse modo, os elementos-filhos desse contêiner tornar-se-ão do tipo flex. Como todas as propriedades no CSS possuem valores padrão, ao criar um contêiner flex, os elementos nele contidos apresentarão o seguinte comportamento:
+
+Exibição em linha (o padrão do flex-direction é row).
+Alinhamento na  borda inicial do eixo principal.
+Não há expansão no eixo principal, mas pode haver contração.
+Haverá expansão vertical para preencher a altura do eixo transversal.
+A propriedade flex-basis (en-US) estará definida como auto.
+A propriedade flex-wrap estará definida como nowrap.
+O resultado final é que todos os elementos serão alinhados em uma linha, usando o tamanho do conteúdo como o tamanho no eixo principal. Se houver mais itens do que é possível caber no container, não haverá uma quebra de linha; ao invés disso, irão ultrapassar o limite horizontal da página. Se alguns elementos forem mais altos que outros, todos os itens se estenderão ao longo do eixo transversal para preencher seu tamanho total.
+
+
+
+
+
+
+
+Propriedade flex-direction
+
+A propriedade flex-direction permite alterar a direção na qual os elementos flex serão exibidos ao longo do eixo principal. Definindo a propriedade flex-direction como row-reverse (linha reversa) ainda teremos os elementos dispostos em uma linha, entretanto, as linhas inicial e final serão trocadas.
+
+Se mudarmos a flex-direction para a column (coluna), o eixo principal exibirá os elemento em uma coluna. Trocando o valor para column-reverse (coluna reversa) fará com que as linhas inicial e final sejam novamente trocadas.
+
+No exemplo prático abaixo tem-se a propriedade flex-direction definida como row-reverse. Experimente os outros valores - row, column e column-reverse - para ver o que acontece com o conteúdo.
+
+.box {
+    display: flex;
+    flex-direction: row;
+  }
+
+
+
+
+
+
