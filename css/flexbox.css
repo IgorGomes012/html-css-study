@@ -17,6 +17,7 @@ Se o valor escolhido for column (coluna) ou column-reverse (coluna reversa) e o 
 
 
 
+
 Eixo transversal
 
 O eixo transversal é perpendicular ao eixo principal, logo, se a propriedade flex-direction estiver definida nas linhas, como row ou row-reverse, o eixo transversal estará na direção das colunas, como column ou column-reverse. 
@@ -73,7 +74,7 @@ No exemplo prático abaixo tem-se a propriedade flex-direction definida como row
     flex-direction: row;
   }
 
-  
+
 
   
 
