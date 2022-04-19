@@ -67,10 +67,15 @@ Se mudarmos a flex-direction para a column (coluna), o eixo principal exibirá o
 
 No exemplo prático abaixo tem-se a propriedade flex-direction definida como row-reverse. Experimente os outros valores - row, column e column-reverse - para ver o que acontece com o conteúdo.
 
+
 .box {
     display: flex;
     flex-direction: row;
   }
+
+  
+
+  
 
 
 
