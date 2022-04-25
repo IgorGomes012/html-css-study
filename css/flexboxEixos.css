@@ -1,0 +1,27 @@
+
+Você aprenderá como alterar esses eixos para organizar seu conteúdo em colunas em vez de linhas.
+A coisa mais confusa sobre o flexbox é que ele pode funcionar horizontalmente ou verticalmente, e a maneira como algumas regras funcionam muda um pouco dependendo da direção em que você está trabalhando.
+
+A direção padrão para um contêiner flexível é horizontal ou row, mas você pode alterar a direção para vertical ou column. A direção pode ser especificada em CSS assim:
+
+css .flex-container { flex-direction: column; }
+
+
+
+Eixos
+Não importa qual direção você esteja usando, você precisa pensar em seus contêineres flexíveis como tendo 2 eixos: o eixo principal e o eixo transversal. É a direção desses eixos que muda quando o flex-directioné alterado. Na maioria das circunstâncias, flex-direction: rowcoloca o eixo principal na horizontal (da esquerda para a direita) e columncoloca o eixo principal na vertical (de cima para baixo).
+
+Em outras palavras, em nosso primeiro exemplo, colocamos display: flexuma div e ela organizou seus filhos horizontalmente. Esta é uma demonstração de flex-direction: row, a configuração padrão. O exemplo a seguir é muito semelhante. Se você descomentar a linha que diz flex-direction: column, esses divs serão empilhados verticalmente.
+
+
+Uma coisa a notar é que neste exemplo, flex-direction: columnnão funcionaria como esperado se usássemos a abreviação flex: 1. Experimente agora (ou seja, altere o valor flex na flex: 1 1 auto;linha). Você pode descobrir por que não funciona se flex: 1for usado? As divs colapsam, embora tenham claramente um heightdefinido lá.
+
+A razão para isso é que a abreviação flex se expande flex-basispara 0, o que significa que todos flex-growos ing e flex-shrinking começariam seus cálculos a partir de 0. Divs vazias por padrão têm 0 de altura, então para que nossos itens flex preencham a altura de seu contêiner, eles não precisam ter nenhuma altura.
+
+O exemplo acima corrigiu isso especificando flex: 1 1 auto, informando aos itens flexíveis para usar como padrão seus dados height. Também poderíamos corrigi-lo colocando uma altura no pai .flex-containerou usando flex-grow: 1em vez da abreviação.
+
+Outro detalhe a ser observado: quando alteramos o flex-direction para column, flex-basisrefere-se a heightem vez de width. Dado o contexto, isso pode ser óbvio, mas é algo para se estar ciente.
+
+Nós nos desviamos um pouco do ponto… Estávamos falando sobre flex-direction e eixos. Para trazê-lo de volta para casa, o comportamento padrão é flex-direction: rowque organiza as coisas horizontalmente. A razão pela qual isso geralmente funciona bem sem alterar outros detalhes no CSS é porque os elementos em nível de bloco são padronizados para a largura total de seu pai. Alterar as coisas para vertical usando flex-direction: columnadiciona complexidade porque os elementos em nível de bloco são padronizados para a altura de seu conteúdo e, nesse caso, não há conteúdo.
+
+Existem situações em que o comportamento do flex-direction pode mudar se você estiver usando uma linguagem escrita de cima para baixo ou da direita para a esquerda, mas você deve evitar se preocupar com isso até que esteja pronto para começar a criar um site em árabe ou hebraico.
