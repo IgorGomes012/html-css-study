@@ -1,0 +1,59 @@
+A flexdeclaração é na verdade uma abreviação de 3 propriedades que você pode definir em um item flexível. Essas propriedades afetam como os itens flexíveis se dimensionam dentro de seu contêiner. Você já viu algumas propriedades abreviadas antes, mas ainda não as definimos oficialmente.
+
+As propriedades abreviadas são propriedades CSS que permitem definir os valores de várias outras propriedades CSS simultaneamente. Usando uma propriedade abreviada, você pode escrever folhas de estilo mais concisas (e geralmente mais legíveis), economizando tempo e energia.
+
+Fonte: propriedades abreviadas no MDN
+
+Nesse caso, flexé na verdade um atalho para flex-grow, flex-shrinke flex-basis.
+
+O valor padrão da flexpropriedade é mostrado na captura de tela acima: flex-grow: 0, flex-shrink: 1, flex-basis: 0%. Muitas vezes você vê a abreviação flex definida com apenas um valor. Nesse caso, esse valor é aplicado a flex-grow, então, quando colocamos flex: 1nossas divs, na verdade estávamos especificando flex: 1 1 0%
+
+
+
+
+
+
+
+
+
+
+
+
+flex-grow
+flex-growespera um único número como seu valor, e esse número é usado como o “fator de crescimento” do flex-item. Quando aplicamos flex: 1a cada div dentro de nosso contêiner, estávamos dizendo a cada div para crescer a mesma quantidade. O resultado disso é que cada div acaba exatamente do mesmo tamanho. Se, em vez disso, adicionarmos flex: 2a apenas uma das divs, essa div aumentará para 2x o tamanho das outras.
+
+No exemplo a seguir , a flexabreviação tem valores para flex-shrinke flex-basisespecificado com seus valores padrão.
+
+
+
+
+
+flex-shrink
+flex-shrinké semelhante a flex-grow, mas define o “fator de redução” de um item flexível. flex-shrinksó acaba sendo aplicado se o tamanho de todos os itens flexíveis for maior que o contêiner pai. Por exemplo, se nossos 3 divs acima tivessem uma declaração de largura como: width: 100px, e .flex-containerfosse menor que 300px, nossos divs teriam que encolher para caber.
+
+O fator de redução padrão é flex-shrink: 1, o que significa que todos os itens serão reduzidos uniformemente. Se você não deseja que um item seja reduzido, você pode especificar flex-shrink: 0;. Você também pode especificar números mais altos para fazer com que certos itens encolham a uma taxa maior do que o normal.
+
+Aqui está um exemplo. Observe que também alteramos os flex-basismotivos que serão explicados em breve. Se você diminuir a janela do navegador, notará que .twonunca fica menor que a largura especificada de 250px, mesmo que a flex-growregra especifique que cada elemento deve ter o mesmo tamanho.
+
+Uma implicação importante a ser observada aqui é que quando você especifica flex-growou flex-shrink, os itens flexíveis não necessariamente respeitam seus valores fornecidos para width. No exemplo acima, todos os 3 divs recebem uma largura de 250px, mas quando seu pai é grande o suficiente, eles crescem para preenchê-lo. Da mesma forma, quando o pai é muito pequeno, o comportamento padrão é encolher para caber. Isso não é um bug, mas pode ser um comportamento confuso se você não estiver esperando por isso.
+
+
+
+
+
+
+base flexível
+flex-basissimplesmente define o tamanho inicial de um item flexível, para que qualquer tipo de flex-growing ou flex-shrinking comece a partir desse tamanho de linha de base. O valor abreviado é padronizado para flex-basis: 0%. O motivo pelo qual tivemos que alterá-lo para autoo flex-shrinkexemplo é que, com a base definida como 0, esses itens ignorariam a largura do item e tudo diminuiria uniformemente. Usar autocomo uma base flexível diz ao item para verificar uma declaração de largura ( width: 250px).
+
+Nota importante sobre flex-base:
+Há uma diferença entre o valor padrão de flex-basise a forma como a flexabreviação o define se não flex-basisfor fornecido. O valor padrão real para flex-basisé auto, mas quando você especifica flex: 1em um elemento, ele interpreta isso como flex: 1 1 0. Se você quiser apenas ajustar um item, flex-growpode simplesmente fazê-lo diretamente, sem a abreviação, ou pode ser mais detalhado e usar a abreviação completa de 3 valores flex: 1 1 auto. Você também pode usar o valor predefinido flex: auto, que é equivalente aflex: 1 1 auto
+
+
+
+
+
+
+Na prática…
+flex-growNa prática , você provavelmente não usará valores complexos para flex-shrinkou flex-basis. Geralmente, é mais provável que você use declarações como flex: 1;fazer divs crescerem uniformemente e flex-shrink: 0impedir que certas divs diminuam.
+
+É possível ficar sofisticado e configurar layouts em que algumas colunas se relacionam em uma proporção específica, por isso é útil saber que você pode usar outros valores, mas esses são relativamente raros.
