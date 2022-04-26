@@ -24,3 +24,95 @@ Leve o seu tempo passando pela leitura. Haverá alguma revisão dos itens que j�
 
 
 
+
+
+
+
+
+
+
+Propriedades que controlam o alinhamento
+As propriedades que veremos neste guia são as seguintes.
+
+justify-content— controla o alinhamento de todos os itens no eixo principal.
+align-items— controla o alinhamento de todos os itens no eixo cruzado.
+align-self— controla o alinhamento de um item flexível individual no eixo cruzado.
+align-content— descrito na especificação como para "empacotar linhas flexíveis"; controla o espaço entre as linhas flexíveis no eixo transversal.
+gap, column-gap, e row-gap— usado para criar lacunas ou medianizes entre itens flexíveis.
+Também descobriremos como as margens automáticas podem ser usadas para alinhamento no flexbox.
+
+
+
+
+
+
+
+
+
+Alinhando um item comalign-self
+
+A align-selfpropriedade aceita todos os mesmos valores align-itemsmais um valor de auto, que irá redefinir o valor para aquele que está definido no contêiner flex.
+
+
+
+
+
+
+
+
+
+
+Alinhando conteúdo no eixo cruzado — a propriedade align-content
+
+Até agora estamos alinhando os itens, ou um item individual dentro da área definida pelo flex-container. Se você tiver um contêiner flexível de várias linhas encapsulado, também poderá usar a align-contentpropriedade para controlar a distribuição de espaço entre as linhas. Na especificação, isso é descrito como linhas flexíveis de embalagem .
+
+Para align-contenttrabalhar, você precisa de mais altura em seu contêiner flexível do que o necessário para exibir os itens. Em seguida, ele funciona em todos os itens como um conjunto e determina o que acontece com esse espaço livre e o alinhamento de todo o conjunto de itens dentro dele.
+
+A align-contentpropriedade assume os seguintes valores:
+
+align-content: flex-start
+align-content: flex-end
+align-content: center
+align-content: space-between
+align-content: space-around
+align-content: stretch
+align-content: space-evenly(não definido na especificação Flexbox)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Usando margens automáticas para alinhamento do eixo principal
+Não temos uma propriedade justify-itemsou justify-selfdisponível para nós no eixo principal, pois nossos itens são tratados como um grupo nesse eixo. No entanto, é possível fazer algum alinhamento individual para separar um item ou um grupo de itens de outros usando margens automáticas junto com o flexbox.
+
+Um padrão comum é uma barra de navegação onde alguns itens-chave são alinhados à direita, com o grupo principal à esquerda. Você pode pensar que este deve ser um caso de uso para uma justify-selfpropriedade, mas considere a imagem abaixo. Tenho três itens de um lado e dois do outro. Se eu pudesse usar justify-selfno item d , também mudaria o alinhamento do item e que segue, o que pode ou não ser minha intenção.
+
+
+Em vez disso, podemos segmentar o item 4 e separá-lo dos três primeiros itens, dando-lhe um margin-leftvalor de auto. As margens automáticas ocuparão todo o espaço que puderem em seu eixo - é assim que funciona a centralização de um bloco com margem automática esquerda e direita. Cada lado tenta ocupar o máximo de espaço possível e, assim, o bloco é empurrado para o meio.
+
+Neste exemplo ao vivo, tenho itens flex organizados em uma linha com os valores flex básicos e a classe pushtem margin-left: auto. Você pode tentar remover isso ou adicionar a classe a outro item para ver como funciona.
+
+
+
+
+
+
+
+
+
+
+
+
+Criando lacunas entre os itens
+
+Para criar uma lacuna entre itens flexíveis, use as propriedades gap, column-gape row-gap. A column-gappropriedade cria lacunas entre os itens no eixo principal. A row-gappropriedade cria espaços entre as linhas flexíveis, quando você flex-wrapdefine como wrap. A gappropriedade é uma abreviação que define os dois juntos.
+
