@@ -1,0 +1,26 @@
+justify-contentalinha os itens no eixo principal . Existem alguns valores que você pode usar aqui. Você aprenderá o resto deles nas tarefas de leitura, mas por enquanto tente alterá-lo para center, que deve centralizar as caixas ao longo do eixo principal.
+
+Para alterar o posicionamento dos itens ao longo do eixo cruzado, use align-items. Tente colocar as caixas no centro do contêiner adicionando align-items: centera .container. O resultado desejado fica assim:
+
+Como justify-contente align-itemssão baseados no eixo principal e cruzado do seu contêiner, seu comportamento muda quando você altera a direção flexível de um contêiner flexível. Por exemplo, quando você muda flex-directionpara column, justify-contentalinha verticalmente e align-itemsalinha horizontalmente. O comportamento mais comum, no entanto, é o padrão, ou seja, justify-contentalinha os itens horizontalmente (porque o eixo principal padrão é horizontal) e align-itemsos alinha verticalmente. Um dos maiores pontos de discórdia que os iniciantes têm com o flexbox é a confusão quando esse comportamento muda
+
+
+
+
+A align-items propriedade alinhará os itens no eixo cruzado.
+
+O valor inicial para esta propriedade é stretche é por isso que os itens flexíveis se estendem até a altura do contêiner flexível por padrão. Isso pode ser determinado pela altura do item mais alto no contêiner ou por um tamanho definido no próprio contêiner flexível.
+
+
+
+
+GAP = VÃO
+Mais um recurso muito útil do flex é a gappropriedade. A configuração gapem um contêiner flexível simplesmente adiciona um espaço especificado entre os itens flexíveis, muito semelhante a adicionar uma margem aos próprios itens. gapé uma propriedade muito nova, por isso não aparece em muitos recursos ainda, mas funciona de forma confiável em todos os navegadores modernos, por isso é seguro de usar e é muito útil! Adicionar gap: 8pxao exemplo centralizado acima produz o resultado abaixo.
+
+Há mais para você aprender na leitura abaixo, mas neste ponto certamente você pode ver como o flexbox é imensamente útil. Usando apenas as propriedades que já cobrimos, você já pode montar alguns layouts impressionantes!
+
+Leve o seu tempo passando pela leitura. Haverá alguma revisão dos itens que já abordamos aqui, mas ela se aprofunda e toca em algumas coisas que ainda não foram mencionadas. Não se estresse muito em tentar memorizar cada pequeno detalhe ainda; apenas codifique junto com os exemplos e faça o seu melhor para internalizar tudo o que é possível com o flexbox. Você terá que buscar esses recursos novamente quando chegar aos exercícios práticos, mas isso é perfeitamente aceitável. Quanto mais você usar esse material, melhor ele ficará em sua mente... e você o usará constantemente . Divirta-se!
+
+
+
+

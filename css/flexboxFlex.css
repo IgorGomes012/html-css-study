@@ -52,8 +52,21 @@ Há uma diferença entre o valor padrão de flex-basise a forma como a flexabrev
 
 
 
+Existem também alguns valores abreviados predefinidos que cobrem a maioria dos casos de uso. Você os verá frequentemente usados ​​em tutoriais e, em muitos casos, isso é tudo o que você precisa usar. Os valores predefinidos são os seguintes:
+
+flex: initial
+flex: auto
+flex: none
+flex: <positive-number>
+
+
+
+
 
 Na prática…
 flex-growNa prática , você provavelmente não usará valores complexos para flex-shrinkou flex-basis. Geralmente, é mais provável que você use declarações como flex: 1;fazer divs crescerem uniformemente e flex-shrink: 0impedir que certas divs diminuam.
 
 É possível ficar sofisticado e configurar layouts em que algumas colunas se relacionam em uma proporção específica, por isso é útil saber que você pode usar outros valores, mas esses são relativamente raros.
+
+
+
