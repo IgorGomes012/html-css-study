@@ -2,7 +2,7 @@ justify-contentalinha os itens no eixo principal . Existem alguns valores que vo
 
 Para alterar o posicionamento dos itens ao longo do eixo cruzado, use align-items. Tente colocar as caixas no centro do contêiner adicionando align-items: centera .container. O resultado desejado fica assim:
 
-Como justify-contente align-itemssão baseados no eixo principal e cruzado do seu contêiner, seu comportamento muda quando você altera a direção flexível de um contêiner flexível. Por exemplo, quando você muda flex-directionpara column, justify-contentalinha verticalmente e align-itemsalinha horizontalmente. O comportamento mais comum, no entanto, é o padrão, ou seja, justify-contentalinha os itens horizontalmente (porque o eixo principal padrão é horizontal) e align-itemsos alinha verticalmente. Um dos maiores pontos de discórdia que os iniciantes têm com o flexbox é a confusão quando esse comportamento muda
+Como justify-contente align-items são baseados no eixo principal e cruzado do seu contêiner, seu comportamento muda quando você altera a direção flexível de um contêiner flexível. Por exemplo, quando você muda flex-direction para column, justify-content alinha verticalmente e align-items alinha horizontalmente. O comportamento mais comum, no entanto, é o padrão, ou seja, justify-content alinha os itens horizontalmente (porque o eixo principal padrão é horizontal) e align-items os alinha verticalmente. Um dos maiores pontos de discórdia que os iniciantes têm com o flexbox é a confusão quando esse comportamento muda
 
 
 
@@ -15,7 +15,7 @@ O valor inicial para esta propriedade é stretche é por isso que os itens flex�
 
 
 GAP = VÃO
-Mais um recurso muito útil do flex é a gappropriedade. A configuração gapem um contêiner flexível simplesmente adiciona um espaço especificado entre os itens flexíveis, muito semelhante a adicionar uma margem aos próprios itens. gapé uma propriedade muito nova, por isso não aparece em muitos recursos ainda, mas funciona de forma confiável em todos os navegadores modernos, por isso é seguro de usar e é muito útil! Adicionar gap: 8pxao exemplo centralizado acima produz o resultado abaixo.
+Mais um recurso muito útil do flex é a gappropriedade. A configuração gapem um contêiner flexível simplesmente adiciona um espaço especificado entre os itens flexíveis, muito semelhante a adicionar uma margem aos próprios itens. gap é uma propriedade muito nova, por isso não aparece em muitos recursos ainda, mas funciona de forma confiável em todos os navegadores modernos, por isso é seguro de usar e é muito útil! Adicionar gap: 8pxao exemplo centralizado acima produz o resultado abaixo.
 
 Há mais para você aprender na leitura abaixo, mas neste ponto certamente você pode ver como o flexbox é imensamente útil. Usando apenas as propriedades que já cobrimos, você já pode montar alguns layouts impressionantes!
 
